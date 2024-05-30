@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: alpaaprthishasankjobservices 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: alpaaprthishasankjobservices
+  template:
+    metadata:
+      labels:
+        app: alpaaprthishasankjobservices 
+    spec:
+      containers:
+        - name: alpaaprthishasankjobservices 
+          image: shasank.azurecr.io/alpaaprthishasankjobservices
+          ports:
+          - containerPort: 8000
